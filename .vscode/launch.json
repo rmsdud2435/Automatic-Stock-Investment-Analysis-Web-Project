@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AsiaApplication<asia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.web.asia.asia.AsiaApplication",
+            "projectName": "asia",
+            "args": ""
+        }
+    ]
+}
