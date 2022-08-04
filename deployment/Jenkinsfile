@@ -1,13 +1,13 @@
 def label = "bootcamp-${UUID.randomUUID().toString()}"
 
 /* -------- functions ---------- */
-def notifySlack(STATUS, COLOR) {
-        slackSend (channel: '#bootcamp', color: COLOR, message: STATUS+" : " +  "${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})")
-}
+//def notifySlack(STATUS, COLOR) {
+//        slackSend (channel: '#bootcamp', color: COLOR, message: STATUS+" : " +  "${env.JOB_NAME} [${env.BUILD_NUMBER}] (${env.BUILD_URL})")
+//}
 
 
 /* ------------------------------ */
-notifySlack("STARTED", "#FFFF00")
+//notifySlack("STARTED", "#FFFF00")
 
 
 podTemplate(containers: [
@@ -131,10 +131,10 @@ podTemplate(containers: [
                         }
             echo "**** FINISH ALL STAGES : SUCCESS"
             echo "**** notifySlack"
-            notifySlack("${currentBuild.currentResult}", "#00FF00")
+            //notifySlack("${currentBuild.currentResult}", "#00FF00")
                 } catch(e) {
                         currentBuild.result = "FAILED"
-                        notifySlack("${currentBuild.currentResult}", "#FF0000")
+                        //notifySlack("${currentBuild.currentResult}", "#FF0000")
                         //notifyMail("${currentBuild.currentResult}", "${email_recipients}")
                 }
         }
